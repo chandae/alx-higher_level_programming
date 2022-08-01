@@ -39,47 +39,29 @@ class Square():
     def __eq__(self, other) -> bool:
         """ Magic method for equality operator """
 
-        if self.area() == other.area():
-            return True
-        else:
-            return False
+        return self.area() == other.area()
 
     def __ne__(self, other):
         """ Magic method for not equal to operator """
 
-        if self.area() != other.area():
-            return True
-        else:
-            return False
+        return self.area() != other.area()
 
     def __lt__(self, other):
         """ Magic method for less than operator """
 
-        if self.area() < other.area():
-            return True
-        else:
-            return False
+        return self.area() < other.area()
 
     def __gt__(self, other):
         """ Magic method for greater than operator """
 
-        if self.area() > other.area():
-            return True
-        else:
-            return False
+        return self.area() > other.area()
 
     def __le__(self, other):
         """ Magic method for less than or equal to operator """
 
-        if self.area() <= other.area():
-            return True
-        else:
-            return False
+        return self.area() <= other.area()
 
     def __ge__(self, other):
         """ Magic method for greater than or equal to operator """
 
-        if self.area() >= other.area():
-            return True
-        else:
-            return False
+        return self.area() >= other.area()
