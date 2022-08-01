@@ -5,6 +5,8 @@
 class Square():
     """ Square class """
 
+    error_msg = "position must be a tuple of 2 positive integers"
+
     def __init__(self, size=0, position=(0, 0)):
         """ Constructor """
 
@@ -22,11 +24,11 @@ class Square():
                 if position[0] >= 0 and position[1] >= 0:
                     self.__position = position
                 else:
-                    raise TypeError("position must be a tuple of 2 positive integers")
+                    raise TypeError(Square.error_msg)
             else:
-                raise TypeError("position must be a tuple of 2 positive integers")
+                raise TypeError(Square.error_msg)
         else:
-            raise TypeError("position must be a tuple of 2 positive integers")
+            raise TypeError(Square.error_msg)
 
     @property
     def size(self):
