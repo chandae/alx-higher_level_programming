@@ -41,7 +41,7 @@ class Square():
                 print()
             for j in range(self.__size):
                 print("{}{}".format(" " * x_position, "#" * self.__size))
-        return None
+        return ''
 
     @property
     def size(self):
