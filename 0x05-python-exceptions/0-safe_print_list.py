@@ -3,12 +3,13 @@
 
 
 def safe_print_list(my_list=[], x=0):
+    count = 0
     try:
-        if x <= len(my_list):
-            print(*my_list[:x], sep='')
-            return x
-        else:
-            print(*my_list[:x], sep='')
-            return len(my_list)
+        for i in range(x):
+            print(my_list[i], end='')
+            count += 1
+        print()
+        return x
     except IndexError:
-        pass
+        print()
+        return count
