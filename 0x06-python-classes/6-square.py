@@ -18,15 +18,18 @@ class Square():
 
         # Set private instance attribute position
         if (isinstance(position, tuple)) and len(position) == 2:
-            if isinstance(position[0], int) != isinstance(position[1], int):
+            if isinstance(position[0], int) and isinstance(position[1], int):
+                if position[0] >= 0 and position[1] >= 0:
+                    self.__position = position
+                else:
+                    raise TypeError("position must be a \
+                        tuple of 2 positive integers")
+            else:
                 raise TypeError("position must be a \
                     tuple of 2 positive integers")
-            if position[0] >= 0 and position[1] >= 0:
-                raise TypeError("position must be a \
-                    tuple of 2 positive integers")
-            self.__position = position
         else:
-            raise TypeError("position must be a tuple of 2 positive integers")
+            raise TypeError("position must be a \
+                tuple of 2 positive integers")
 
     @property
     def size(self):
@@ -54,11 +57,20 @@ class Square():
     def position(self, value):
         """ Setter method for private attribute position """
 
+        # Set private instance attribute position
         if (isinstance(value, tuple)) and len(value) == 2:
-            if (isinstance(value[0], int) and isinstance(value[1], int)):
-                self.__position = value
+            if isinstance(value[0], int) and isinstance(value[1], int):
+                if value[0] >= 0 and value[1] >= 0:
+                    self.__position = value
+                else:
+                    raise TypeError("position must be a \
+                        tuple of 2 positive integers")
+            else:
+                raise TypeError("position must be a \
+                    tuple of 2 positive integers")
         else:
-            raise TypeError("position must be a tuple of 2 positive integers")
+            raise TypeError("position must be a \
+                tuple of 2 positive integers")
 
     def area(self):
         """ Returns current square area """
