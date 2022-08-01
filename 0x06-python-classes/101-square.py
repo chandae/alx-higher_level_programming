@@ -34,7 +34,7 @@ class Square():
         """ Prints the square instance with # character """
 
         if self.__size == 0:
-            print()
+            return '\n'
         else:
             x_position = self.__position[0]
             for i in range(self.__position[1]):
