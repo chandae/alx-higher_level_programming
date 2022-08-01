@@ -1,19 +1,36 @@
 #!/usr/bin/python3
-""" My square module """
+""" My Square Module """
 
 
 class Square():
     """ Square class """
 
-    """ Constructor """
     def __init__(self, size=0):
-        if type(size) != int:
+        """ Constructor """
+        if not (isinstance(size, int)):
             raise TypeError("size must be an integer")
         elif size < 0:
             raise ValueError("size must be >= 0")
         else:
             self.__size = size
 
-    """ Returns current square area """
+    @property
+    def size(self):
+        """ Returns the square size """
+
+        return self.__size
+
+    @size.setter
+    def size(self, value):
+        """ Setter method for private attribute size """
+
+        if not (isinstance(value, int)):
+            raise TypeError("size must be an integer")
+        if value < 0:
+            raise ValueError("size must be >= 0")
+        self.__size = value
+
     def area(self):
+        """ Returns current square area """
+
         return self.__size ** 2
