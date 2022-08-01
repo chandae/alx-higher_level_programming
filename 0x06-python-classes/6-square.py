@@ -17,11 +17,14 @@ class Square():
             self.__size = size
 
         # Set private instance attribute position
-        case_1 = (isinstance(position, tuple)) and len(position) == 2
-        case_2 = (isinstance(position[0], int) and isinstance(position[1], int))
-        case_3 = position[0] >= 0 and position[1] >= 0
-        if case_1 and case_2 and case_3:
-            self.__position = position
+        if (isinstance(position, tuple)) and len(position) == 2:
+            if (isinstance(position[0], int) and isinstance(position[1], int)):
+                if position[0] >= 0 and position[1] >= 0:
+                    self.__position = position
+                else:
+                    raise TypeError("position must be a tuple of 2 positive integers")
+            else:
+                raise TypeError("position must be a tuple of 2 positive integers")
         else:
             raise TypeError("position must be a tuple of 2 positive integers")
 
