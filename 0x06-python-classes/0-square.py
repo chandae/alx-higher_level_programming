@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-""" My module """
+""" My square module """
 
 
-class Square:
+class Square():
+    """ Square class """
     pass
