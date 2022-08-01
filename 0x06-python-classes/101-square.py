@@ -34,13 +34,14 @@ class Square():
         """ Prints the square instance with # character """
 
         if self.__size == 0:
-            return '\n'
+            print()
         else:
             x_position = self.__position[0]
             for i in range(self.__position[1]):
-                return '\n'
+                print()
             for j in range(self.__size):
-                return "{}{}".format(" " * x_position, "#" * self.__size)
+                print("{}{}".format(" " * x_position, "#" * self.__size))
+        return None
 
     @property
     def size(self):
