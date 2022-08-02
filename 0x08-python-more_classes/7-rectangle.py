@@ -37,7 +37,7 @@ class Rectangle():
         else:
             rect = ""
             for line in range(self.__height):
-                rect += self.__width * self.print_symbol + '\n'
+                rect += self.__width * str(self.print_symbol) + '\n'
             return rect.rstrip()
 
     def __repr__(self):
