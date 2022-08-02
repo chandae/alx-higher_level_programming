@@ -7,7 +7,10 @@ class Node():
 
     def __init__(self, data, next_node=None):
         """ Constructor """
-        self.__data = data
+        if (isinstance(data, int)):
+            self.__data = data
+        else:
+            raise TypeError("data must be an integer")
         self.__next_node = next_node
 
     def __str__(self):
