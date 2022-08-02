@@ -58,7 +58,7 @@ class SinglyLinkedList():
     def __str__(self):
         """ Printable Linked List Instance """
         if self.__head is None:
-            print('Linked list is empty')
+            return ""
         else:
             itr = self.__head
             linked_list = ""
