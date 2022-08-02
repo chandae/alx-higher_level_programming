@@ -65,7 +65,7 @@ class SinglyLinkedList():
             while itr:
                 linked_list += str(itr.data) + '\n'
                 itr = itr.next_node
-            return linked_list
+            return linked_list.rstrip()
 
     def sorted_insert(self, value):
         """ Adds a new node in sorted increasing order """
