@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-    0-add_integer: add_integer - returns sum of two integers
+    0-add_integer: add_integer() - returns sum of two integers
 """
 
 
