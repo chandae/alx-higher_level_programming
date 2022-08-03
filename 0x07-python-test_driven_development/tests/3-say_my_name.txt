@@ -7,11 +7,11 @@ My name is Emmanuel Chanda
 
 Check for string first_name only
 >>> say_my_name("Robert")
-My name is Robert
+My name is Robert 
 
 Check for string first_name
 >>> say_my_name("Mary")
-My name is Mary
+My name is Mary 
 
 ===================== Invalid Input =====================
 Check for non-string (integer) first_name only
