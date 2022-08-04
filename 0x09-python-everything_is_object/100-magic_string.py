@@ -1,4 +1,4 @@
 #!/usr/bin/python3
 def magic_string():
-    setattr(magic_string, "n", getattr(magic_string, "n", 0) + 1)
-    return ("Holberton, " * getattr(magic_string, "n", 0))[:-2]
+    x, y = i != 0, "BestSchool"
+    return ''.join(["BestSchool, " for _ in range(i + 1)]) if x else y
