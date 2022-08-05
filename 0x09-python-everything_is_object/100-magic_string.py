@@ -1,4 +1,13 @@
 #!/usr/bin/python3
+
+def call_counter(func):
+    def helper():
+        helper.calls += 1
+        return func()
+    helper.calls = 0
+
+    return helper
+
+@call_counter
 def magic_string():
-    global i
-    return ''.join(["BestSchool, " for _ in range(i + 1)]).strip()
+    return 'BestSchool, ' * (magic_string.calls - 1) + 'BestSchool'
