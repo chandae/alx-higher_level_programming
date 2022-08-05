@@ -1,3 +1,4 @@
 #!/usr/bin/python3
 def magic_string():
-    return 'BestSchool, ' * globals()['i'] + 'BestSchool'
+    itr = list(globals().items())[-1][1]
+    return 'BestSchool, ' * itr + 'BestSchool'
