@@ -3,7 +3,7 @@
     Loads script arguments to list and then saves list to json file
 """
 import json
-import os
+from shutil import ExecError
 import sys
 
 
@@ -14,12 +14,8 @@ def load_from_json_file(filename):
         Args:
             filename -  name of file to get object from
     """
-    if os.path.exists(filename):
-        with open(filename, 'r', encoding='utf-8') as json_file:
-            return json.load(json_file)
-    else:
-        with open(filename, 'w', encoding='utf-8') as json_file:
-            save_to_json_file([], filename)
+    with open(filename, 'r', encoding='utf-8') as json_file:
+        return json.load(json_file)
 
 
 def save_to_json_file(my_obj, filename):
@@ -34,10 +30,15 @@ def save_to_json_file(my_obj, filename):
         json.dump(my_obj, json_file)
 
 
-if __name__ == '__main__':
-    items = load_from_json_file('add_item.json')
-    if not items:
-        items = load_from_json_file('add_item.json')
-    if len(sys.argv) > 1:
-        items.extend(sys.argv[1:])
-        save_to_json_file(items, 'add_item.json')
+if __name__ == "__main__":
+
+    filename = "add_item.json"
+
+    try:
+        arg_list = load_from_json_file(filename)
+    except Exception as err:
+        arg_list = []
+
+    for arg in sys.argv[1:]:
+        arg_list.append(arg)
+    save_to_json_file(arg_list, filename)
