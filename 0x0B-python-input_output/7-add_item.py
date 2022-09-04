@@ -2,11 +2,31 @@
 """
     Loads script arguments to list and then saves list to json file
 """
+import json
 import sys
 
 
-save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
-load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
+def load_from_json_file(filename):
+    """
+        Creates python oject from json file
+
+        Args:
+            filename -  name of file to get object from
+    """
+    with open(filename, 'r', encoding='utf-8') as json_file:
+        return json.load(json_file)
+
+
+def save_to_json_file(my_obj, filename):
+    """
+        Writes and saves json object to a text file
+
+        Args:
+            my_obj -  object to write to text file
+            filename -  name of file to write to
+    """
+    with open(filename, 'w', encoding='utf-8') as json_file:
+        json.dump(my_obj, json_file)
 
 
 if __name__ == "__main__":
