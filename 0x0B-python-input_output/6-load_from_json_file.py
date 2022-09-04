@@ -12,5 +12,5 @@ def load_from_json_file(filename):
         Args:
             filename -  name of file to get object from
     """
-    with open(filename, 'w', encoding='utf-8') as json_file:
+    with open(filename, 'r', encoding='utf-8') as json_file:
         json.load(json_file)
