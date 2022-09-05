@@ -1,6 +1,6 @@
-#!/usr/bin/python3
+
 """
-    Student Class: Student
+    Pascal's Triangle Python Implementation
 """
 
 
@@ -12,7 +12,6 @@ def factorial(n: int):
 
 
 def pascal_triangle(n):
-    """ Return a list of lists of integers representing pascal's triangle """
     array = []
     for i in range(n):
         temp = []
