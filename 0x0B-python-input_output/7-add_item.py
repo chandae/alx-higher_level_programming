@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+
 """
     Loads script arguments to list and then saves list to json file
 """
