@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+
 """
     Student Class: Student
 """
@@ -22,6 +22,17 @@ class Student():
     def to_json(self, attrs=None) -> dict:
         """ Returns dictionary representation of object """
         if attrs:
-            return {k: self.__dict__[k] for k in attrs if hasattr(self, k)}
+            return {k: self.__dict__[k] for k in self.__dict__.keys() & attrs}
         else:
             return self.__dict__
+
+student_1 = Student("John", "Doe", 23)
+student_2 = Student("Bob", "Dylan", 27)
+
+j_student_1 = student_1.to_json()
+j_student_2 = student_2.to_json(['first_name', 'age'])
+j_student_3 = student_2.to_json(['middle_name', 'age'])
+
+print(j_student_1)
+print(j_student_2)
+print(j_student_3)
