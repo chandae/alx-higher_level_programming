@@ -2,7 +2,6 @@
 """
     Loads script arguments to list and then saves list to json file
 """
-import json
 import sys
 
 
