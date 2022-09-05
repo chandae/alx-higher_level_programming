@@ -22,6 +22,6 @@ class Student():
     def to_json(self, attrs=None) -> dict:
         """ Returns dictionary representation of object """
         if attrs:
-            return {k: self.__dict__[k] for k in self.__dict__.keys() & attrs}
+            return {k: self.__dict__[k] for k in attrs if hasattr(self, k)}
         else:
             return self.__dict__
