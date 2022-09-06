@@ -8,8 +8,7 @@ const char = 'X';
 if (isNaN(Number(myArg))) {
   console.log('Missing size');
 } else {
-  const row = char.repeat(myArg);
   for (let j = 0; j < myArg; j++) {
-    console.log(row);
+    console.log(char.repeat(myArg));
   }
 }
