@@ -3,15 +3,13 @@
 // Script to print square of size argv[2].
 
 const myArg = process.argv[2];
-let rows = 'X';
+const char = 'X';
 
 if (isNaN(Number(myArg))) {
   console.log('Missing size');
 } else {
-  for (let i = 0; i < myArg - 1; i++) {
-    rows += 'X';
-  }
+  const row = char.repeat(myArg);
   for (let j = 0; j < myArg; j++) {
-    console.log(rows);
+    console.log(row);
   }
 }
