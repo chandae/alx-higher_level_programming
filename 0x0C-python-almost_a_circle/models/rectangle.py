@@ -19,6 +19,11 @@ class Rectangle(Base):
         self.__x = x
         self.__y = y
 
+    def __str__(self) -> str:
+        """ Print rectangle object """
+        print(f"[Rectangle] ({self.id}) {self.x}/{self.y} \
+            - {self.width}/{self.height}")
+
     @property
     def width(self):
         """ Width getter method """
