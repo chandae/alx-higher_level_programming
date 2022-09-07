@@ -17,39 +17,39 @@ class Rectangle(Base):
     @property
     def width(self):
         """ Width getter method """
-        return self.width
+        return self.__width
 
     @width.setter
     def width(self, value):
         """ Width public setter method """
-        self.width = value
+        self.__width = value
 
     @property
     def height(self):
         """ Height getter method """
-        return self.height
+        return self.__height
 
     @height.setter
     def height(self, value):
         """ Height public setter method """
-        self.height = value
+        self.__height = value
 
     @property
     def x(self):
         """ x getter method """
-        return self.x
+        return self.__x
 
     @x.setter
     def x(self, value):
         """ x public setter method """
-        self.x = value
+        self.__x = value
 
     @property
     def y(self):
         """ y getter method """
-        return self.y
+        return self.__y
 
     @y.setter
     def y(self, value):
         """ y public setter method """
-        self.y = value
+        self.__y = value
