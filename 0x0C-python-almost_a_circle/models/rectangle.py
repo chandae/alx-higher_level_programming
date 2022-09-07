@@ -67,6 +67,11 @@ class Rectangle(Base):
         """ Return rectangle area """
         return self.__width * self.__height
 
+    def display(self, char='#'):
+        """ Print rectangle to stdout """
+        for i in range(self.height):
+            print(self.width * char)
+
     def valid(self, name, value, greater_equal=False):
         """ Check if input is an integer """
         if not (isinstance(value, int)):
