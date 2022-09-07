@@ -76,8 +76,10 @@ class Rectangle(Base):
 
     def display(self, char='#'):
         """ Print rectangle to stdout """
-        for i in range(self.height):
-            print(self.width * char)
+        for i in range(self.y):
+            print()
+        for j in range(self.height):
+            print(' ' * self.x + self.width * char)
 
     def valid(self, name, value, greater_equal=False):
         """ Check if input is an integer """
