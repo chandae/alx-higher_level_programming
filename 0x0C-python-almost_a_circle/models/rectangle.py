@@ -16,7 +16,7 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        """ Width getter and setter property """
+        """ Width getter method """
         return self.width
 
     @width.setter
@@ -24,14 +24,9 @@ class Rectangle(Base):
         """ Width public setter method """
         self.width = value
 
-    @width.getter
-    def width(self):
-        """ Width public getter method """
-        return self.width
-
     @property
     def height(self):
-        """ Height getter and setter property """
+        """ Height getter method """
         return self.height
 
     @height.setter
@@ -39,14 +34,9 @@ class Rectangle(Base):
         """ Height public setter method """
         self.height = value
 
-    @height.getter
-    def height(self):
-        """ Height public getter method """
-        return self.height
-
     @property
     def x(self):
-        """ x getter and setter property """
+        """ x getter method """
         return self.x
 
     @x.setter
@@ -54,22 +44,12 @@ class Rectangle(Base):
         """ x public setter method """
         self.x = value
 
-    @x.getter
-    def x(self):
-        """ x public getter method """
-        return self.x
-
     @property
     def y(self):
-        """ y getter and setter property """
+        """ y getter method """
         return self.y
 
     @y.setter
     def y(self, value):
         """ y public setter method """
         self.y = value
-
-    @y.getter
-    def y(self, value):
-        """ y public getter method """
-        return self.y
