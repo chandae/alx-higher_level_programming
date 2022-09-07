@@ -21,8 +21,9 @@ class Rectangle(Base):
 
     def __str__(self) -> str:
         """ Print rectangle object """
-        print(f"[Rectangle] ({self.id}) {self.x}/{self.y} \
-            - {self.width}/{self.height}")
+        print("[Rectangle] ({}) {}/{} - {}/{}".format(
+            self.id, self.x, self.y, self.width, self.height
+            ))
 
     @property
     def width(self):
