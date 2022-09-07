@@ -9,6 +9,11 @@ class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None) -> None:
         """ Constructor """
         super().__init__(id)
+        # Perform data validations
+        self.valid('width', width)
+        self.valid('height', height)
+        self.valid('x', x, True)
+        self.valid('y', y, True)
         self.__width = width
         self.__height = height
         self.__x = x
