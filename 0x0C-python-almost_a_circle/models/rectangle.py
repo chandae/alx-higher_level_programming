@@ -63,6 +63,10 @@ class Rectangle(Base):
         self.valid('y', value, True)
         self.__y = value
 
+    def area(self):
+        """ Return rectangle area """
+        return self.__width * self.__height
+
     def valid(self, name, value, greater_equal=False):
         """ Check if input is an integer """
         if not (isinstance(value, int)):
