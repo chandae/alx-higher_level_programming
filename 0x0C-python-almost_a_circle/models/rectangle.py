@@ -97,6 +97,10 @@ class Rectangle(Base):
         for j in range(self.height):
             print(' ' * self.x + self.width * char)
 
+    def to_dictionary(self):
+        """ Return dictionary representation of object """
+        return self.__dict__
+
     def valid(self, name, value, greater_equal=False):
         """ Check if input is an integer """
         if not (isinstance(value, int)):
