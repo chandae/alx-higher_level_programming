@@ -51,4 +51,4 @@ class Square(Rectangle):
     def to_dictionary(self):
         """ Rturns dictionary representation """
         return {'x': getattr(self, "x"), 'y': getattr(self, "y"),
-                'id': getattr(self, "id"), 'size': getattr(self, "size"),}
+                'id': getattr(self, "id"), 'size': getattr(self, "size")}
