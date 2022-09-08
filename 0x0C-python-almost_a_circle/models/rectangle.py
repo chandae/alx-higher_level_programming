@@ -70,6 +70,18 @@ class Rectangle(Base):
         self.valid('y', value, True)
         self.__y = value
 
+    def update(self, *args):
+        """ Update object atrributes with contents of args """
+        if args:
+            try:
+                self.id = args[0]
+                self.__width = args[1]
+                self.__height = args[2]
+                self.__x = args[3]
+                self.__y = args[4]
+            except IndexError:
+                pass
+
     def area(self):
         """ Return rectangle area """
         return self.__width * self.__height
