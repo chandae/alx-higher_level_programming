@@ -100,8 +100,9 @@ class Rectangle(Base):
     def to_dictionary(self):
         """ Return dictionary representation of object """
         return {
-            'x': getattr(self, "x"), 'y': getattr(self, "y"), 'id': getattr(self, "id"),
-            'height': getattr(self, "height"),'width': getattr(self, "width")}
+            'x': getattr(self, "x"), 'y': getattr(self, "y"),
+            'id': getattr(self, "id"), 'height': getattr(self, "height"),
+            'width': getattr(self, "width")}
 
     def valid(self, name, value, greater_equal=False):
         """ Check if input is an integer """
