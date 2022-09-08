@@ -70,7 +70,7 @@ class Rectangle(Base):
         self.valid('y', value, True)
         self.__y = value
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """ Update object atrributes with contents of args """
         if args:
             try:
@@ -81,6 +81,10 @@ class Rectangle(Base):
                 self.__y = args[4]
             except IndexError:
                 pass
+        else:
+            for attr, value in kwargs.items():
+                self.__setattr__(attr, value)
+            return
 
     def area(self):
         """ Return rectangle area """
