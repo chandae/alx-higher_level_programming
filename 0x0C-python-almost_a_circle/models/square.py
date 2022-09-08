@@ -34,7 +34,7 @@ class Square(Rectangle):
 
     def update(self, *args, **kwargs):
         """ Update object atrributes with contents of args """
-        if args and len(args) > 1:
+        if args and len(args) > 0:
             try:
                 self.id = args[0]
                 self.width = args[1]
