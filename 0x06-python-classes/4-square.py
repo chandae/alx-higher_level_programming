@@ -18,13 +18,11 @@ class Square():
     @property
     def size(self):
         """ Returns the square size """
-
         return self.__size
 
     @size.setter
     def size(self, value):
         """ Setter method for private attribute size """
-
         if not (isinstance(value, int)):
             raise TypeError("size must be an integer")
         if value < 0:
@@ -33,5 +31,4 @@ class Square():
 
     def area(self):
         """ Returns current square area """
-
         return self.__size ** 2
