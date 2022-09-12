@@ -13,7 +13,8 @@ if __name__ == '__main__':
                          port=3306)
     cur = db.cursor()
     cur.execute("SELECT * FROM states ORDER BY id ASC")
-    for query in cur.fetchall():
+    queries = cur.fetchall()
+    for query in queries:
         print(query)
     cur.close()
     db.close()
