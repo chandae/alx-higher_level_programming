@@ -14,13 +14,14 @@ if __name__ == "__main__":
                          host='localhost',
                          port=3306)
     cur = db.cursor()
-    cur.execute("""SELECT id name FROM states
-        WHERE name LIKE 'N%'
-        ORDER BY id ASC
-        """)
-    allStates = cur.fetchall()
+    cmd = """SELECT id, name
+             FROM states
+             WHERE name LIKE BINARY 'N%'
+             ORDER BY id ASC;"""
+    cur.execute(cmd)
+    nStates = cur.fetchall()
 
-    for state in allStates:
+    for state in nStates:
         print(state)
 
     cur.close()
