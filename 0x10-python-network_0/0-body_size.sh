@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 # scripts makes a cURL request to url passed as argument
 # displays the size of the body of the response
 
