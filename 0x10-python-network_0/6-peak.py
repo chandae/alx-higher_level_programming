@@ -4,7 +4,7 @@
 
 def find_peak(array):
     """ find the peak element in my_list """
-    n =  len(array)
+    n = len(array)
     if n == 0:
         return
     mid = n // 2
