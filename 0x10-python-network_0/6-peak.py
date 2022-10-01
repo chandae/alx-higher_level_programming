@@ -9,8 +9,8 @@ def find_peak(array):
         return
     mid = n // 2
 
-    check_1 = (mid == 0 or array[mid - 1] <= array[mid])
-    check_2 = (mid == n - 1 or array[mid + 1] < array[mid])
+    check_1 = (mid == 0 or array[mid - 1] < array[mid])
+    check_2 = (mid == n - 1 or array[mid + 1] <= array[mid])
     if check_1 and check_2:
         return array[mid]
     elif (mid > 0 and array[mid - 1] > array[mid]):
