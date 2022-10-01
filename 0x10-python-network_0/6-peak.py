@@ -7,13 +7,18 @@ def find_peak(array):
     n = len(array)
     if n == 0:
         return
-    mid = n // 2
 
-    check_1 = (mid == 0 or array[mid - 1] < array[mid])
-    check_2 = (mid == n - 1 or array[mid + 1] <= array[mid])
-    if check_1 and check_2:
-        return array[mid]
-    elif (mid > 0 and array[mid - 1] > array[mid]):
-        return find_peak(array[:mid])
-    else:
-        return find_peak(array[mid:])
+    def findPeakUtil(arr, lower, upper, n):
+        mid = lower + (upper - lower) / 2
+        mid = int(mid)
+
+        check_1 = (mid == 0 or arr[mid - 1] <= arr[mid])
+        check_2 = (mid == n - 1 or arr[mid + 1] <= arr[mid])
+        if check_1 and check_2:
+            return arr[mid]
+        elif (mid > 0 and arr[mid + 1] > arr[mid]):
+            return findPeakUtil(arr, (mid + 1), upper, n)
+        else:
+            return findPeakUtil(arr, lower, (mid - 1), n)
+
+    return findPeakUtil(array, 0, n - 1, n)
