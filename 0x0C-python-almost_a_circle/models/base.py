@@ -13,3 +13,10 @@ class Base():
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+    
+    def to_json_string(list_dict):
+        """ returns json string representation """
+        if list_dict is None or list_dict == {}:
+            return "[]"
+        else:
+            return str(list_dict)
