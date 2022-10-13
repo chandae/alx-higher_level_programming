@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """ Base Class """
+import json
 
 
 class Base():
@@ -19,5 +20,4 @@ class Base():
         """ returns json string representation """
         if list_dict is None or list_dict == {}:
             return "[]"
-        else:
-            return str(list_dict)
+        return json.dumps(list_dict)
