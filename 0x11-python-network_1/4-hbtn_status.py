@@ -1,4 +1,4 @@
-
+#!/usr/bin/python3
 """
     Script that fetches https://intranet.htbtn.io/status
 """
