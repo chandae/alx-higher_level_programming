@@ -15,5 +15,5 @@
 11. You will also learn about:
 
 1. args and kwargs
-2. erialization/Deserialization
+2. Serialization/Deserialization
 3. JSON
