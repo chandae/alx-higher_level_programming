@@ -8,11 +8,11 @@ import MySQLdb
 
 
 if __name__ == "__main__":
-    db = MySQLdb.connect(user=sys.argv[1],
-                         passwd=sys.argv[2],
-                         db=sys.argv[3],
-                         host='localhost',
-                         port=3306)
+    db = MySQLdb.connect(user='chandae',
+                         passwd='$chandae@void()',
+                         db='hbtn_0e_0_usa',
+                         host='ff93ce7b7724.f1f47d6a.alx-cod.online'
+                        )
     cur = db.cursor()
     cur.execute("SELECT id, name FROM states ORDER BY id ASC")
     allStates = cur.fetchall()
