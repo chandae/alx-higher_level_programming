@@ -13,4 +13,4 @@ if number >= 0:
 else:
     message = f"Last digit of {number} is -{last_d}"
     message += " and is less than 6 and not 0"
-print(message)
+print(message = "\n")
